@@ -21,7 +21,9 @@ jobs:
           name: products
           command: |
             ls build/
-            rm build/*.{o,d,lst}
+            rm build/*.o
+            rm build/*.d
+            rm build/*.lst
       - store_artifacts:
           path: build/
           destination: products`
