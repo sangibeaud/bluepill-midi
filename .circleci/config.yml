@@ -18,9 +18,10 @@ jobs:
 #          paths:
 #            - "venv"
       - run:
-          name: Running tests
+          name: products
           command: |
             ls build/
+            rm build/*.{o,d,lst}
       - store_artifacts:
           path: build/
           destination: products`
